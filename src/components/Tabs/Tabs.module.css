@@ -1,0 +1,27 @@
+.tabs-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.tabs-list--pill {
+  gap: var(--TabsPillGap, 12px);
+}
+
+.tabs-list--underline {
+  gap: var(--TabsUnderlineGap, 32px);
+}
+
+.tabs__content {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .tab-list--pill {
+    --TabsPillGap: 8px;
+  }
+
+  .tab-list--underline {
+    --TabsUnderlineGap: 24px;
+  }
+}

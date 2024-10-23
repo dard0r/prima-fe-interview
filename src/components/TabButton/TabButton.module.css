@@ -1,0 +1,80 @@
+button {
+  all: unset;
+}
+
+.tab {
+  height: var(--TabHeight, 50px);
+  color: var(--OnNeutral, #1b2134);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 21px;
+}
+
+.tab:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.tab--pill {
+  border-radius: 100px;
+  border: 1px solid var(--Outline, #d3d3dc);
+  padding: var(--PillPadding, 0 16px);
+}
+
+.tab--pill:hover {
+  background: var(--SurfaceHover, #f6f6fa);
+}
+
+.tab--pill:active {
+  background: var(--SurfaceActive, #f1f1f7);
+}
+
+.tab--pill.tab--selected {
+  background: var(--Inverse, #1b2134);
+  color: var(--OnInverse, #ffffff);
+}
+
+.tab--pill.tab--selected:hover {
+  background: var(--InverseHover, #343a4e);
+}
+
+.tab--pill.tab--selected:active {
+  background: var(--InverseActive, #585d71);
+}
+
+.tab--underline {
+  background: var(--Surface, #fff);
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+
+.tab--underline:hover::after,
+.tab--underline:active::after,
+.tab--underline:focus-visible::after,
+.tab--underline.tab--selected::after {
+  content: "";
+  height: 3px;
+  background: var(--OutlineHover, #c4c5cf);
+  display: block;
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tab--underline.tab--selected::after {
+  background: var(--Inverse, #1b2134);
+}
+
+@media screen and (max-width: 768px) {
+  .tab {
+    --TabHeight: 42px;
+  }
+
+  .tab--pill {
+    --PillPadding: 0 12px;
+  }
+}

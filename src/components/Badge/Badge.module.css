@@ -1,0 +1,25 @@
+.badge {
+  --FontSize: 12px;
+  padding: var(--BadgePadding, 4px 8px);
+  border-radius: 12px;
+  color: var(--OnNeutral, #1b2134);
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .badge {
+    --BadgePadding: 2px 4px;
+  }
+}
+
+.badge--neutral {
+  background: var(--SurfaceHigh, #f1f1f7);
+}
+
+.badge--positive {
+  background: var(--SurfacePositive, #b1ffc7);
+}
+
+.badge--negative {
+  background: var(--SurfaceNegative, #ffbfb1);
+}
